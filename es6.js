@@ -60,24 +60,24 @@ const s = [5, 7, 2];
 }
 editInPlace();
 
-//using Object.freeze() method 
-function freezeObj() {
-    "use strict";
-    const MATH_CONSTANTS = {
-      PI: 3.14
-    };
-    // change code below this line
-  Object.freeze(MATH_CONSTANTS)
+// //using Object.freeze() method 
+// function freezeObj() {
+//     "use strict";
+//     const MATH_CONSTANTS = {
+//       PI: 3.14
+//     };
+//     // change code below this line
+//   Object.freeze(MATH_CONSTANTS)
   
-    // change code above this line
-    try {
-      MATH_CONSTANTS.PI = 99;
-    } catch( ex ) {
-      console.log(ex);
-    }
-    return MATH_CONSTANTS.PI;
-  }
-  const PI = freezeObj();
+//     // change code above this line
+//     try {
+//       MATH_CONSTANTS.PI = 99;
+//     } catch( ex ) {
+//       console.log(ex);
+//     }
+//     return MATH_CONSTANTS.PI;
+//   }
+//   const PI = freezeObj();
 
 
   //replacing anonymous functions with arrow functions
@@ -95,3 +95,17 @@ function freezeObj() {
   };
   // test your code
   console.log(myConcat([1, 2], [3, 4, 5]));
+
+
+  //using higher order functions and arrow functions
+  const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+  "use strict";
+  // change code below this line
+  const squaredIntegers =  arr.filter( (num) => num > 0 && num % parseInt(num) === 0 ).map( (num) => Math.pow(num, 2) );
+  // change code above this line
+  return squaredIntegers;
+};
+// test your code
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
