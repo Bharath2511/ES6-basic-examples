@@ -11,3 +11,15 @@ function catTalk() {
 }
 
 catTalk();
+//functionality of let keyword try the same program using var 
+//keyword you will notice the difference
+function checkScope() {
+    "use strict";
+      let i = "function scope";
+      if (true) {
+        let i = "block scope";
+        console.log("Block scope i is: ", i);
+      }
+      console.log("Function scope i is: ", i);
+      return i;
+    }
