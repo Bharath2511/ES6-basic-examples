@@ -1,3 +1,6 @@
+/*feel free to play with the below code*/
+
+
 //replacing var keyword with let keyword
 let catName;
 let quote;
@@ -40,3 +43,19 @@ function checkScope() {
       
       }
       printManyTimes("javaScript");
+
+//mutating principle using const
+const s = [5, 7, 2];
+    function editInPlace() {
+  "use strict";
+  // change code below this line
+
+  s[0] = 2
+  s[1] = 5
+  s[2] = 7
+  console.log(s)
+
+
+  // change code above this line
+}
+editInPlace();
