@@ -119,3 +119,19 @@ const increment = (function() {
   })();
   console.log(increment(5, 2)); // returns 7
   console.log(increment(5)); // returns 6
+
+
+//  ES6: Use the Rest Operator with Function Parameters
+// In order to help us create more flexible functions, 
+// ES6 introduces the rest operator for function parameters. 
+// With the rest operator,
+//  you can create functions that take a variable number of arguments.
+//  These arguments are stored in an array that can be accessed later from inside the function.
+const sum = (function() {
+    "use strict";
+    return function sum(...args) {
+      //const args = [ x, y, z ];
+      return args.reduce((a, b) => a + b, 0);
+    };
+  })();
+  console.log(sum(1, 2, 3, 4)); // 6
