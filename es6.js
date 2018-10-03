@@ -23,3 +23,20 @@ function checkScope() {
       console.log("Function scope i is: ", i);
       return i;
     }
+
+    //using const and let inside a block
+    function printManyTimes(str) {
+        "use strict";
+      
+        // change code below this line
+      
+        
+        for(let i = 0; i < str.length; i+=2) {
+          const SENTENCE = str + " is cool!";
+          console.log(SENTENCE);
+        }
+      
+        // change code above this line
+      
+      }
+      printManyTimes("javaScript");
