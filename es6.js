@@ -135,3 +135,15 @@ const sum = (function() {
     };
   })();
   console.log(sum(1, 2, 3, 4)); // 6
+
+  //spread operators
+  const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr); // returns 89
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+(function() {
+  "use strict";
+  arr2 = [...arr1]; // change this line
+})();
+console.log(arr2);
